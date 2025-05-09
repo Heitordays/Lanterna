@@ -55,9 +55,10 @@ $tasks = [
   ),
 ];
 
-Route::get('/tasks', function () {
+Route::get('/', function ()  {
     return redirect()->route('tasks.index');
 });
+
 
 Route::get('/tasks', function () use ($tasks) {
     return view('index', [
@@ -66,21 +67,14 @@ Route::get('/tasks', function () use ($tasks) {
     ]);
 })->name('tasks.index');
 
-Route::get('/tasks{id}', function ($id) {
-    return view('aranha');
-})->name('task.show');
+Route::get('/tasks/1', function () {
+    return view('task1');
+})->name('task1.show');
 
-// Route::get('/hello', function () {
-//     return;
-// })->name('hello');
+Route::get('/tasks/2', function () {
+    return view('task2');
+})->name('task2.show');
 
-// Route::get('/greet/{name}', function ($name) {
-//     return 'Hello, ' . $name . '!';
-// });
-
-// Route::get('/hallo', function () {  
-//     return redirect('/hello');
-// });
 
 Route::fallback(function () {
     return view('sonic');
