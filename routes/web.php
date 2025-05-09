@@ -1,7 +1,6 @@
 <?php
-
+use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Route;
-
 class Task
 {
   public function __construct(
@@ -19,7 +18,7 @@ class Task
 $tasks = [
   new Task(
     1,
-    'Buy groceries',
+    'Sonic basico 1',
     'Task 1 description',
     'Task 1 long description',
     false,
@@ -28,7 +27,7 @@ $tasks = [
   ),
   new Task(
     2,
-    'Sell old stuff',
+    'Sonic contorno',
     'Task 2 description',
     null,
     false,
@@ -37,7 +36,7 @@ $tasks = [
   ),
   new Task(
     3,
-    'Learn programming',
+    'Sonic basico 2',
     'Task 3 description',
     'Task 3 long description',
     true,
@@ -46,7 +45,7 @@ $tasks = [
   ),
   new Task(
     4,
-    'Take dogs for a walk',
+    'Sonic em pé',
     'Task 4 description',
     null,
     false,
@@ -67,15 +66,33 @@ Route::get('/tasks', function () use ($tasks) {
     ]);
 })->name('tasks.index');
 
-Route::get('/tasks/1', function () {
-    return view('task1');
-})->name('task1.show');
+// Route::get('/tasks/1', function () {
+//     return view('task1');
+// })->name('task1.show');
 
-Route::get('/tasks/2', function () {
-    return view('task2');
-})->name('task2.show');
+// Route::get('/tasks/2', function () {
+//     return view('task2');
+// })->name('task2.show');
 
+// Route::get('/tasks/3', function () {
+//     return view('task3');
+// })->name('task3.show');
+
+// Route::get('/tasks/4', function () {
+//     return view('task4');
+// })->name('task4.show');
+
+
+Route::get('/tasks/{id}', function ($id) use ($tasks) {
+    $task = collect($tasks)->firstWhere('id', $id);
+
+    if (!$task) {
+        abort(Response::HTTP_NOT_FOUND);
+    }
+
+    return view('show', ['task' => $task]);
+})->name('tasks.show');
 
 Route::fallback(function () {
-    return view('sonic');
+    return view('show');
 });
