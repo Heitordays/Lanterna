@@ -55,20 +55,33 @@ $tasks = [
   ),
 ];
 
-Route::get('/', function () {
+Route::get('/tasks', function () {
+    return redirect()->route('tasks.index');
+});
+
+Route::get('/tasks', function () use ($tasks) {
     return view('index', [
-        'name' => 'Potiguar'
+        'name' => 'Potiguar',
+        'tasks' => $tasks,
     ]);
-});
+})->name('tasks.index');
 
-Route::get('/hello', function () {
-    return;
-})->name('hello');
+Route::get('/tasks{id}', function ($id) {
+    return view('aranha');
+})->name('task.show');
 
-Route::get('/greet/{name}', function ($name) {
-    return 'Hello, ' . $name . '!';
-});
+// Route::get('/hello', function () {
+//     return;
+// })->name('hello');
 
-Route::get('/hallo', function () {  
-    return redirect('/hello');
+// Route::get('/greet/{name}', function ($name) {
+//     return 'Hello, ' . $name . '!';
+// });
+
+// Route::get('/hallo', function () {  
+//     return redirect('/hello');
+// });
+
+Route::fallback(function () {
+    return view('sonic');
 });
