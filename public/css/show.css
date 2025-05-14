@@ -47,3 +47,8 @@ a.back-button {
     border-radius: 10px;
     text-align: center;
 }
+
+a.back-button.highlight {
+    color: aqua; /* Cor brilhante */
+    text-shadow: 0 0 10px rgb(181, 255, 255), 0 0 20px rgb(181, 255, 255); /* Efeito de brilho */
+}

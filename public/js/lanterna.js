@@ -3,7 +3,7 @@ lanterna.id = 'lanterna';
 lanterna.classList.add('lanterna');
 document.body.appendChild(lanterna);
 
-const buttons = document.querySelectorAll('.container a, a.back-button');
+const buttons = document.querySelectorAll('.container a, a.back-button'); // Inclui o botão "Voltar"
 
 // Adiciona o evento 'mousemove' ao documento
 document.addEventListener('mousemove', (e) => {
@@ -26,8 +26,12 @@ document.addEventListener('mousemove', (e) => {
             lanternaRect.top <= rect.bottom
         ) {
             button.classList.add('visible'); // Torna o botão visível
+            if (button.classList.contains('back-button')) {
+                button.classList.add('highlight'); // Adiciona brilho ao botão "Voltar"
+            }
         } else {
             button.classList.remove('visible'); // Oculta o botão
+            button.classList.remove('highlight'); // Remove o brilho do botão "Voltar"
         }
     });
 });
@@ -52,4 +56,3 @@ document.addEventListener('keyup', (e) => {
         toggleLanterna(false); // Desliga a lanterna
     }
 });
-

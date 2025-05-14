@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <h1>Ta mt escuro, procura os botões (aperta j pra acender a luz)</h1>
+        <h1>Ta mt escuro, procure os botões... (aperte "j" pra ligar a lanterna)</h1>
 
         <div class="container">
             @forelse ($tasks as $task)
