@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/global.js') }}"></script>
+    <script src="{{ asset('js/aleatorio.js') }}"></script>
     <script src="{{ asset('js/lanterna.js') }}"></script>
 </body>
 </html>
