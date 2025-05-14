@@ -1,0 +1,30 @@
+services:
+  mysql:
+    image: mysql:8.0 # Alterado para MySQL
+    container_name: laravel-mysql # Nome do container
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel-10-task-list # Banco de dados inicial
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql # Persistência de dados
+    networks:
+      - laravel-net # Rede personalizada
+
+  adminer:
+    image: adminer
+    container_name: adminer # Nome do container
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    networks:
+      - laravel-net # Rede personalizada
+
+volumes:
+  mysql_data:
+
+networks:
+  laravel-net:
+    driver: bridge

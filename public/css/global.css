@@ -1,0 +1,15 @@
+.lanterna {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(1, 238, 255, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
+    pointer-events: none; /* Para não interferir nos cliques */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+}
+
+.container a.visible {
+    opacity: 1; 
+    color:aqua
+}

@@ -1,22 +1,32 @@
-<body style="background-color:rgb(19, 47, 59);"></body>
-<h1>{{$task->title}}</h1>
-<p>{{$task->description}}</p>
+<!DOCTYPE html>
 
-@if($task->long_description)
-    <p>{{ $task->long_description }}</p>
-@endif
+<html lang="pt-BR">
 
-<p>{{ $task->created_at }}</p>
-<p>{{ $task->updated_at }}</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $task->title }}</title>
+    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
+</head>
 
-<a href="{{ route('tasks.index') }}" 
-style=
-"display: inline-block;
-margin-top: 20px;
-padding: 10px 15px;
-background-color:rgb(17, 36, 57);
-color: white;
-text-decoration: none;
-border-radius: 5px;">
-Voltar.
-</a>
+
+<body>
+    <h1>{{ $task->title }}</h1>
+    <p>{{ $task->description }}</p>
+
+    @if($task->long_description)
+        <p>{{ $task->long_description }}</p>
+    @endif
+
+    <p>Criado em: {{ $task->created_at }}</p>
+    <p>Atualizado em: {{ $task->updated_at }}</p>
+
+    <a href="{{ route('tasks.index') }}" class="back-button">Voltar</a>
+
+    <script src="{{ asset('js/global.js') }}"></script>
+    <script src="{{ asset('js/lanterna.js') }}"></script>
+</body>
+
+
+</html>
