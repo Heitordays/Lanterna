@@ -18,9 +18,11 @@ body {
     margin: 10px auto;
     padding: 10px 15px;
     background-color: rgb(17, 36, 57);
-    color: rgb(0, 0, 0);
+    color: rgb(17, 36, 57);
     text-decoration: none;
     border-radius: 20px;
     opacity: 0; /* Botões começam invisíveis */
     transition: opacity 0,3s ease; /* Suaviza a transição */
 }
+
+

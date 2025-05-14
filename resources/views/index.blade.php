@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <body>
+<img src="{{ asset('images/garoto.png') }}" alt="Descrição da imagem" style="width: 300px; height: auto;">
     <div>
 
     <h1>
-    @foreach (mb_str_split('Tá mt escuro, procure os botões... (aperte "j" pra ligar a lanterna)') as $char)
+    @foreach (mb_str_split('Está muito escuro para ler algo, aperte "j" para iluminar') as $char)
         <span class="letter">{{ $char }}</span>
     @endforeach
 </h1>

@@ -35,3 +35,15 @@ body {
     color: aqua; /* Cor brilhante */
     text-shadow: 0 0 10px aqua, 0 0 20px aqua;
 }
+
+h1 .letter {
+    letter-spacing: -6px;
+}
+
+h1 .letter {
+    color: rgb(17, 36, 57);/* Substitua "blue" pela cor desejada */
+}
+
+.letter {
+    color: rgb(19, 47, 59); /* Substitua "red" pela cor desejada */
+}
