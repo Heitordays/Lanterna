@@ -41,9 +41,15 @@ h1 .letter {
 }
 
 h1 .letter {
-    color: rgb(17, 36, 57);/* Substitua "blue" pela cor desejada */
+    color: rgb(17, 36, 57);
+}
+
+h2 .letter {
+    letter-spacing: -2px;
+    color: rgb(19, 47, 59);
+    transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
 .letter {
-    color: rgb(19, 47, 59); /* Substitua "red" pela cor desejada */
+    color: rgb(19, 47, 59);
 }
