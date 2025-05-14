@@ -4,6 +4,7 @@ lanterna.classList.add('lanterna');
 document.body.appendChild(lanterna);
 
 const buttons = document.querySelectorAll('.container a, a.back-button'); // Inclui o botão "Voltar"
+const letters = document.querySelectorAll('.letter'); // Seleciona todas as letras do h1
 
 // Adiciona o evento 'mousemove' ao documento
 document.addEventListener('mousemove', (e) => {
@@ -18,7 +19,6 @@ document.addEventListener('mousemove', (e) => {
     buttons.forEach((button) => {
         const rect = button.getBoundingClientRect(); // Obtém as dimensões do botão
 
-        // Verifica se a lanterna está sobrepondo o botão
         if (
             lanternaRect.right >= rect.left &&
             lanternaRect.left <= rect.right &&
@@ -32,6 +32,22 @@ document.addEventListener('mousemove', (e) => {
         } else {
             button.classList.remove('visible'); // Oculta o botão
             button.classList.remove('highlight'); // Remove o brilho do botão "Voltar"
+        }
+    });
+
+    // Verifica se a lanterna está sobre as letras
+    letters.forEach((letter) => {
+        const rect = letter.getBoundingClientRect(); // Obtém as dimensões da letra
+
+        if (
+            lanternaRect.right >= rect.left &&
+            lanternaRect.left <= rect.right &&
+            lanternaRect.bottom >= rect.top &&
+            lanternaRect.top <= rect.bottom
+        ) {
+            letter.classList.add('glow'); // Adiciona brilho à letra
+        } else {
+            letter.classList.remove('glow'); // Remove o brilho da letra
         }
     });
 });
@@ -56,3 +72,19 @@ document.addEventListener('keyup', (e) => {
         toggleLanterna(false); // Desliga a lanterna
     }
 });
+
+letters.forEach((letter) => {
+    console.log('Letra detectada:', letter.textContent); // Verifica se as letras estão sendo encontradas
+});
+
+if (
+    lanternaRect.right >= rect.left &&
+    lanternaRect.left <= rect.right &&
+    lanternaRect.bottom >= rect.top &&
+    lanternaRect.top <= rect.bottom
+) {
+    console.log('Lanterna sobre a letra:', letter.textContent); // Verifica se a lanterna está sobre a letra
+    letter.classList.add('glow'); // Adiciona brilho à letra
+} else {
+    letter.classList.remove('glow'); // Remove o brilho da letra
+}

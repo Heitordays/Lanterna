@@ -12,19 +12,40 @@
 
 
 <body>
-    <h1>{{ $task->title }}</h1>
-    <p>{{ $task->description }}</p>
+    <h1>
+        @foreach (mb_str_split($task->title) as $char)
+            <span class="letter">{{ $char }}</span>
+        @endforeach
+    </h1>
+
+    <p>
+        @foreach (mb_str_split($task->description) as $char)
+            <span class="letter">{{ $char }}</span>
+        @endforeach
+    </p>
 
     @if($task->long_description)
-        <p>{{ $task->long_description }}</p>
+        <p>
+            @foreach (mb_str_split($task->long_description) as $char)
+                <span class="letter">{{ $char }}</span>
+            @endforeach
+        </p>
     @endif
 
-    <p>Criado em: {{ $task->created_at }}</p>
-    <p>Atualizado em: {{ $task->updated_at }}</p>
+    <p>
+        @foreach (mb_str_split('Criado em: ' . $task->created_at) as $char)
+            <span class="letter">{{ $char }}</span>
+        @endforeach
+    </p>
+
+    <p>
+        @foreach (mb_str_split('Atualizado em: ' . $task->updated_at) as $char)
+            <span class="letter">{{ $char }}</span>
+        @endforeach
+    </p>
 
     <a href="{{ route('tasks.index') }}" class="back-button">Voltar</a>
 
-   <!-- <script src="{{ asset('js/aleatorio.js') }}"></script> -->
     <script src="{{ asset('js/lanterna.js') }}"></script>
 </body>
 

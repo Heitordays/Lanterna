@@ -6,10 +6,15 @@
     <title>Task List</title>
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <body>
     <div>
-        <h1>Ta mt escuro, procure os botões... (aperte "j" pra ligar a lanterna)</h1>
+
+    <h1>
+    @foreach (mb_str_split('Tá mt escuro, procure os botões... (aperte "j" pra ligar a lanterna)') as $char)
+        <span class="letter">{{ $char }}</span>
+    @endforeach
+</h1>
 
         <div class="container">
             @forelse ($tasks as $task)

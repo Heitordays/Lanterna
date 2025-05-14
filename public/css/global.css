@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Substitua 'Roboto' por 'Montserrat' */
+}
+
 .lanterna {
     position: absolute;
     width: 300px;
@@ -20,4 +24,14 @@
 .container a.visible {
     position: absolute; /* Permite que os botões sejam movidos */
     transition: all 1s ease; /* Suaviza a transição ao mudar de posição */
+}
+
+.letter {
+    display: inline-block;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.letter.glow {
+    color: aqua; /* Cor brilhante */
+    text-shadow: 0 0 10px aqua, 0 0 20px aqua;
 }
