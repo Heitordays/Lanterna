@@ -31,3 +31,25 @@ document.addEventListener('mousemove', (e) => {
         }
     });
 });
+
+function toggleLanterna(isOn) {
+    if (isOn) {
+        lanterna.style.display = 'block'; // Mostra a lanterna
+    } else {
+        lanterna.style.display = 'none'; // Esconde a lanterna
+    }
+}
+
+// Eventos para detectar a tecla "J"
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'j' || e.key === 'J') {
+        toggleLanterna(true); // Liga a lanterna
+    }
+});
+
+document.addEventListener('keyup', (e) => {
+    if (e.key === 'j' || e.key === 'J') {
+        toggleLanterna(false); // Desliga a lanterna
+    }
+});
+
