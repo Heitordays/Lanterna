@@ -23,16 +23,15 @@
     @endforeach
 </h2>
 
-        <div class="container">
-            @forelse ($tasks as $task)
-                <a href="{{ route('tasks.show', ['id' => $task->id]) }}">
-                    {{ $task->title }}
-                </a>
-            @empty
-                <p>Tem nadakkkkkkkkkkkkkj.</p>
-            @endforelse
-        </div>
-    </div>
+<div class="container">
+    @forelse ($tasks as $task)
+        <a href="{{ route('tasks.show', ['id' => $task->id]) }}">
+            {{ $task->title }}
+        </a>
+    @empty
+        <p>Não há tarefas disponíveis.</p>
+    @endforelse
+</div>
 
     <script src="{{ asset('js/aleatorio.js') }}"></script>
     <script src="{{ asset('js/lanterna.js') }}"></script>

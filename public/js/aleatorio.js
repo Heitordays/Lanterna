@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
-    buttons.forEach((button) => {
-        moveButtonRandomly(button); // Chama a função do arquivo aleatorio.js
-    });
+    // buttons.forEach((button) => {
+    //     moveButtonRandomly(button); // Chama a função do arquivo aleatorio.js
+    // });
 });
 
 function moveButtonRandomly(button) {

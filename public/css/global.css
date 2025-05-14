@@ -15,14 +15,14 @@ body {
 }
 
 .container a.visible {
-    position:absolute;
+    /*position:absolute;*/
     opacity: 1; 
     text-shadow: 0 0 10px rgb(181, 255, 255), 0 0 20px rgb(181, 255, 255);
     color:rgb(159, 255, 247)
 }
 
 .container a.visible {
-    position: absolute; /* Permite que os botões sejam movidos */
+    /*position: absolute;*/ /* Permite que os botões sejam movidos */
     transition: all 1s ease; /* Suaviza a transição ao mudar de posição */
 }
 
@@ -53,3 +53,4 @@ h2 .letter {
 .letter {
     color: rgb(19, 47, 59);
 }
+
