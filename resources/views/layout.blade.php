@@ -5,51 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $task->title }}</title>
+    <title>@yield('title', 'Título Padrão')</title>
     <link rel="stylesheet" href="{{ asset('css/show.css') }}">
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
 </head>
 
-
 <body>
-
-<h1>Ilumine abaixo para ver oq está escrito</h1>
-    <h2>
-        @foreach (mb_str_split($task->title) as $char)
+    <h1>
+        @foreach (mb_str_split('Título padrão') as $char)
             <span class="letter">{{ $char }}</span>
         @endforeach
-    </h2>
+    </h1>
 
-    <p>
-        @foreach (mb_str_split($task->description) as $char)
-            <span class="letter">{{ $char }}</span>
-        @endforeach
-    </p>
-
-    @if($task->long_description)
-        <p>
-            @foreach (mb_str_split($task->long_description) as $char)
-                <span class="letter">{{ $char }}</span>
-            @endforeach
-        </p>
-    @endif
-
-    <p>
-        @foreach (mb_str_split('Criado em: ' . $task->created_at) as $char)
-            <span class="letter">{{ $char }}</span>
-        @endforeach
-    </p>
-
-    <p>
-        @foreach (mb_str_split('Atualizado em: ' . $task->updated_at) as $char)
-            <span class="letter">{{ $char }}</span>
-        @endforeach
-    </p>
+    @yield('content')
 
     <a href="{{ route('tasks.index') }}" class="back-button">Voltar</a>
 
     <script src="{{ asset('js/lanterna.js') }}"></script>
 </body>
-
 
 </html>
