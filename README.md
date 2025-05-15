@@ -1,3 +1,38 @@
+# Lanterna
+
+Projeto que estou desenvolvendo no curso do meu trabalho. Apesar de ser um curso sobre banco de dados, decidi explorar mais e "inventar moda" com CSS e JavaScript para criar algo visualmente interessante.
+
+## Descrição
+
+O projeto simula uma página onde o usuário precisa "iluminar" elementos da interface com uma lanterna virtual. A ideia é criar uma experiência interativa, utilizando conceitos de HTML, CSS e JavaScript, além de integrar com Laravel para gerenciar dados.
+
+## Funcionalidades
+
+- **Lanterna virtual**: O usuário pode iluminar partes da página ao pressionar a tecla `j`.
+- **Efeito de iluminação**: Letras e botões mudam de cor ao serem iluminados.
+- **Botões dinâmicos**: Os botões são gerados dinamicamente com base em dados fornecidos.
+- **Estilo personalizado**: Uso de CSS para criar efeitos visuais únicos.
+
+## Tecnologias Utilizadas
+
+- **Frontend**:
+  - HTML
+  - CSS (com efeitos avançados de transição e sombras)
+  - JavaScript
+- **Backend**:
+  - Laravel (PHP Framework)
+- **Banco de Dados**:
+  - Simulado (dados estão sendo gerados diretamente no código por enquanto)
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Heitordays/Lanterna.git
+
+//////////////////////////////////////////////
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
