@@ -18,7 +18,7 @@
 </h1>
 
 <h2>
-    @foreach (mb_str_split('Procure um botão para avançar') as $char)
+    @foreach (mb_str_split('Procure um botão para avançar...') as $char)
         <span class="letter">{{ $char }}</span>
     @endforeach
 </h2>
