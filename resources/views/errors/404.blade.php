@@ -36,7 +36,7 @@
 </head>
 <body>
     <div>
-        <h1>Juquera maluco</h1>
+        <h1>JUQUERA MALUCO HAHAHAHAHHAH</h1>
         <p>Ops! Parece que você se perdeu.</p>
         <a href="{{ route('tasks.index') }}">Socorro</a>
     </div>
