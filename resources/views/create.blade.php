@@ -1,46 +1,33 @@
-<!DOCTYPE html>
+@extends('layouts.app')
 
-<html lang="pt-BR">
+@section('title', 'Add Task')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ 'ahaha' }}</title>
-    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-</head>
+@section('content')
 
+<form method="POST" action="{{ route('task.store') }}">
+@csrf   
 
-<body>
+<div>
+    <label for="title">
+Title
+    </label>
+    <input type="text" name="title" id="title" />
+</div> 
 
+<div>
+    <label for="description">Description</label>
+    <textarea name="description" id="description" rows="5"></textarea> 
+</div>
 
-    <h1>
-        @foreach (mb_str_split('teste') as $char)
-            <span class="letter">{{ $char }}</span>
-        @endforeach
-    </h1>
+<div>
+    <label for="long_description">Long Description</label>
+    <textarea name="long_description" id="long_description" rows="10"></textarea> 
+</div>
 
-    <p>
-        @foreach (mb_str_split(
-            '           
-⠀⠀⠀⠀⠀⠐⢶⣶⣶⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣦⣄⠀⠀⠀⠀⠀ 
-⠀⢀⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀
-⠰⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀
-⠀⠀⠀⠈⠙⣿⣿⣿⣿⣿⣿⡿⠛⠛⢿⣿⣿⣿⣿⣄⣀⣀
-⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⠁⢠⡄⠈⣿⣿⣿⣿⣿⣿⠟
-⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣷⡋⠀⠀⣿⣿⡿⢻⠟⠁⠀
-⠀⢠⡿⠟⠋⠉⠉⠀⠀⠉⠛⢿⣿⣷⣶⣿⣻⠁⠁⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠙⠃⠀⠀⠀⠀'
-        ) as $char)
-            <span class="letter">{{ $char }}</span>
-        @endforeach
-    </p>
+<div>
+<button type="submit">Add task</button>
+</div>
 
-    <a href="{{ route('tasks.index') }}" class="back-button">Voltar</a>
+</form>
 
-    <script src="{{ asset('js/lanterna.js') }}"></script>
-</body>
-
-
-</html>
+@endsection
