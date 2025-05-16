@@ -23,6 +23,12 @@
     @endforeach
 </h2>
 
+<div class="container" style="margin-top: 20px;">
+    <a href="{{ route('tasks.create') }}" class="create-button">
+        CREATE
+    </a>
+</div>
+
 <div class="container">
     @forelse ($tasks as $task)
         <a href="{{ route('tasks.show', ['id' => $task->id]) }}">
@@ -33,7 +39,7 @@
     @endforelse
 </div>
 
-    <script src="{{ asset('js/aleatorio.js') }}"></script>
+   <script src="{{ asset('js/aleatorio.js') }}"></script>
     <script src="{{ asset('js/lanterna.js') }}"></script>
 </body>
 </html>

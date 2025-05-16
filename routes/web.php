@@ -30,6 +30,8 @@ Route::fallback(function () {
 
 Route::post('/tasks', function (Request $request){
     $data=$request->validate([
-
+        'title' => 'required|max:255',
+        'description' => 'required',
+        'long_description' => 'required',
     ]);
 })->name('task.store');
