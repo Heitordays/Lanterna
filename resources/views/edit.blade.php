@@ -10,9 +10,10 @@
 <link rel="stylesheet" href="{{ asset('css/create.css') }}">
 </head>
 
-<form method="POST" action="{{ route('task.store') }}">
-@csrf
-@method('PUT')  
+<form method="POST" action="{{ route('tasks.update', $task->id) }}">
+    @csrf
+    @method('PUT')
+ 
 
 <h1>tralalero</h1>
 <div>
