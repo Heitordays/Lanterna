@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <body>
-<img src="{{ asset('images/garoto.png') }}" alt="Descrição da imagem" style="width: 800px; height: auto;">
-    <div>
 
+<div class="garoto" style="position: relative; width: 600px;">
+  <img src="images/luz.gif" alt="Luz" style="width: 200px; position: absolute; top: 34%; left: 22%; z-index: 10;">
+  <img src="{{ asset('images/garoto.png') }}" alt="Descrição da imagem" style="width: 600px; height: auto; z-index: 1;">
+</div>
+
+    <div>
     <h1 style="text-align: left;">
     @foreach (mb_str_split('Está muito escuro para ler algo, aperte "j" para iluminar') as $char)
         <span class="letter">{{ $char }}</span>
