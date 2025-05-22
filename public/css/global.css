@@ -4,8 +4,8 @@ body {
 
 .lanterna {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     background: radial-gradient(circle, rgba(202, 246, 249, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
     pointer-events: none; /* Para não interferir nos cliques */
     border-radius: 100%;

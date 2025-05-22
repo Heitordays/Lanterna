@@ -35,7 +35,7 @@ Route::fallback(function () {
     return view('errors.404');
 });
 
-Route::post('/tasks', function ($id, Request $request){
+Route::post('/tasks', function (Request $request){
     $data=$request->validate([
         'title' => 'required|max:255',
         'description' => 'required',
