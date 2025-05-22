@@ -23,7 +23,7 @@
     @endforeach
 </h2>
 
-<div class="container" style="margin-top: 20px;">
+<div class="container" style="margin-top: 20px; text-align: left;">
     <a href="{{ route('tasks.create') }}" class="create-button">
         CREATE
     </a>
