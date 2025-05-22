@@ -29,7 +29,7 @@
 
 <div class="container" style="margin-top: 20px; text-align: left;">
     <a href="{{ route('tasks.create') }}" class="create-button">
-        CREATE
+        Criar tarefa
     </a>
 </div>
 

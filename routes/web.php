@@ -69,3 +69,8 @@ Route::put('/tasks/{id}', function ($id, Request $request) {
         ->route('tasks.show', ['id' => $task->id])
         ->with('success', 'Task updated successfully!');
 })->name('tasks.update');
+
+Route::get('/tasks/{id}/edit', function ($id) {
+    $task = Task::findOrFail($id);
+    return view('edit', compact('task'));
+})->name('tasks.edit');

@@ -45,6 +45,8 @@
     </p>
 
     <a href="{{ route('tasks.index') }}" class="back-button">Voltar</a>
+    <a href="{{ route('tasks.edit', $task->id) }}" class="back-button">
+    Editar</a>
 
     <script src="{{ asset('js/lanterna.js') }}"></script>
 </body>
