@@ -74,3 +74,10 @@ Route::get('/tasks/{id}/edit', function ($id) {
     $task = Task::findOrFail($id);
     return view('edit', compact('task'));
 })->name('tasks.edit');
+
+Route::delete('/tasks/{id}', function ($id) {
+    $task = Task::findOrFail($id);
+    $task->delete();
+
+    return redirect()->route('tasks.index')->with('success', 'Task deletada com sucesso!');
+})->name('tasks.destroy');

@@ -41,4 +41,10 @@
             <button type="submit">Salvar Alterações</button>
         </div>
     </form>
+    <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" onsubmit="return confirm('Tem certeza que quer deletar essa task?')">
+    @csrf
+    @method('DELETE')
+    <button type="submit">🗑️ Deletar</button>
+</form>
+
 @endsection
