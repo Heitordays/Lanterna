@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <body>
 
-<div class="garoto" style="position: relative; width: 600px;">
+<div class="garoto" style="position: relative; width: 700px;">
   <img src="images/luz.gif" alt="Luz" style="width: 200px; position: absolute; top: 34%; left: 22%; z-index: 10;">
+  <img src="images/snow02.gif" alt="Snow" style="width: 450px; position: absolute; top: 1%; left: 12%; z-index: 11;">
   <img src="{{ asset('images/garoto.png') }}" alt="Descrição da imagem" style="width: 600px; height: auto; z-index: 1;">
 </div>
 
