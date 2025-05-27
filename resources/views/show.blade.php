@@ -48,6 +48,16 @@
     <a href="{{ route('tasks.edit', $task->id) }}" class="back-button">
     Editar</a>
 
+<div>
+<form  method="POST"  action="{{ route('tasks.toggle-complete', ['task' => $task->id]) }}">
+    @csrf
+    @method('PUT')
+    <button type="submit" class="back-button">
+        {{ $task->completed ? 'Incompleta' : 'Completa' }}
+    </button>
+</form>
+</div>
+
     <script src="{{ asset('js/lanterna.js') }}"></script>
 </body>
 

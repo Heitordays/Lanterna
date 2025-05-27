@@ -57,3 +57,25 @@ a.back-button.highlight {
     text-align: center;
 
 }
+
+button.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: rgb(20, 42, 68);
+    color: rgb(20, 42, 68);
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button.back-button:hover {
+    background-color: rgb(25, 50, 70);
+}
+button.back-button.highlight {
+    color: aqua; /* Cor brilhante */
+    text-shadow: 0 0 10px rgb(181, 255, 255), 0 0 20px rgb(181, 255, 255); /* Efeito de brilho */
+}

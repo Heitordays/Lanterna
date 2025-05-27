@@ -3,7 +3,7 @@ lanterna.id = 'lanterna';
 lanterna.classList.add('lanterna');
 document.body.appendChild(lanterna);
 
-const buttons = document.querySelectorAll('.container a, a.back-button'); // Inclui o botão "Voltar"
+const buttons = document.querySelectorAll('.container a, a.back-button, button.back-button'); // Inclui o botão "Voltar"
 const letters = document.querySelectorAll('.letter'); // Seleciona todas as letras do h1
 
 // Adiciona o evento 'mousemove' ao documento
