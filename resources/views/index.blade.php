@@ -17,7 +17,7 @@
 </div>
 
     <div>
-    <h1 style="text-align: left; font-size: 50px; letter-spacing: -3px; max-width: 70%">
+    <h1 style="text-align: left; font-size: 50px; letter-spacing: -3px; max-width: 80%">
     @foreach (mb_str_split('"Está muito escuro para ler algo, aperte "j" para iluminar"') as $char)
         <span class="letter">{{ $char }}</span>
     @endforeach

@@ -11,6 +11,13 @@
 
 <body>
 
+<!-- <div class="mb-10 rounded border border-green-400 bg-green 100 px-4 py-3 text-lx text-green-700">
+    <strong class="font-blood">succ</strong>
+    <div>
+        cumcuber
+    </div>
+</div> -->
+
     <div class="container">
         @yield('content')
     </div>

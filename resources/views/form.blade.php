@@ -3,10 +3,7 @@
 @section('title', isset($task) ? 'Edit Task' : 'Add Task')
 
 @section('styles')
-<link rel="stylesheet" href="{{ asset('css/create.css') }}">
-<link rel="stylesheet" href="{{ asset('css/global.css') }}">
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
-<link rel="stylesheet" href="{{ asset('css/show.css') }}">
+<link rel="stylesheet" href="{{ asset('css/form.css') }}">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 @endsection
 
@@ -45,21 +42,21 @@
     </div>
 
     <div>
-        <button type="submit" class="back-button">
+        <button type="submit">
             {{ isset($task) ? 'Update Task' : 'Add Task' }}
         </button>
     </div>
 </form>
 
 @isset($task)
-    <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" onsubmit="return confirm('Tem certeza que quer deletar essa task?')">
+    <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" onsubmit="return confirm('Haha ou n haha?')">
         @csrf
         @method('DELETE')
-        <button type="submit" class="back-button">🗑️ Deletar</button>
+        <button type="submit">🗑️ Deletar</button>
     </form>
-    <a href="{{ route('tasks.index', $task->id) }}"class="back-button">Voltar</a>
+    <!-- <a href="{{ route('tasks.index', $task->id) }}"class="back-button">Voltar</a> -->
 @endisset
 
-<script src="{{ asset('lanterna.js') }}"></script>
+<a href="{{ route('tasks.index') }}" class="back-button">Voltar</a>
 
 @endsection

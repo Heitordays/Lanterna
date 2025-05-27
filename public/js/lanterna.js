@@ -88,3 +88,27 @@ if (
 } else {
     letter.classList.remove('glow'); // Remove o brilho da letra
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lanterna = document.createElement('div');
+    lanterna.id = 'lanterna';
+    lanterna.classList.add('lanterna');
+    document.body.appendChild(lanterna);
+
+    document.addEventListener('mousemove', (e) => {
+        lanterna.style.left = `${e.pageX - 150}px`;
+        lanterna.style.top = `${e.pageY - 150}px`;
+    });
+
+    const letters = document.querySelectorAll('.letter');
+    if (letters.length > 0) {
+        letters.forEach((letter) => {
+            letter.addEventListener('mouseenter', () => {
+                letter.classList.add('glow');
+            });
+            letter.addEventListener('mouseleave', () => {
+                letter.classList.remove('glow');
+            });
+        });
+    }
+});
