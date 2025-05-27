@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 <div class="garoto" style="position: relative; width: 700px;">
   <img src="images/luz.gif" alt="Luz" style="width: 200px; position: absolute; top: 34%; left: 22%; z-index: 10;">
@@ -16,7 +17,7 @@
 </div>
 
     <div>
-    <h1 style="text-align: left;">
+    <h1 style="text-align: left; font-size: 50px; letter-spacing: -3px; max-width: 70%">
     @foreach (mb_str_split('"Está muito escuro para ler algo, aperte "j" para iluminar"') as $char)
         <span class="letter">{{ $char }}</span>
     @endforeach
@@ -56,7 +57,7 @@
 <div class="flex justify-between items-center mt 10">
 
     <a href="{{ $tasks->previousPageUrl() }}" style="font-size: 100px !important;">
-    &larr;
+        &larr;
 </a>
 
     <a href="{{ $tasks->nextPageUrl() }}" style="font-size: 100px !important;">

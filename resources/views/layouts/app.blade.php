@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>@yield('title')</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     @yield('styles')
 </head>
 

@@ -4,10 +4,11 @@
 
 @section('styles')
 <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 @endsection
 
 @section('content')
-
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <form method="POST" action="{{ isset($task) ? route('tasks.update', $task->id) : route('task.store') }}">
     @csrf   
     @isset($task)
