@@ -4,6 +4,9 @@
 
 @section('styles')
 <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+<link rel="stylesheet" href="{{ asset('css/global.css') }}">
+<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+<link rel="stylesheet" href="{{ asset('css/show.css') }}">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 @endsection
 
@@ -42,7 +45,7 @@
     </div>
 
     <div>
-        <button type="submit">
+        <button type="submit" class="back-button">
             {{ isset($task) ? 'Update Task' : 'Add Task' }}
         </button>
     </div>
@@ -52,8 +55,11 @@
     <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" onsubmit="return confirm('Tem certeza que quer deletar essa task?')">
         @csrf
         @method('DELETE')
-        <button type="submit">🗑️ Deletar</button>
+        <button type="submit" class="back-button">🗑️ Deletar</button>
     </form>
+    <a href="{{ route('tasks.index', $task->id) }}"class="back-button">Voltar</a>
 @endisset
+
+<script src="{{ asset('lanterna.js') }}"></script>
 
 @endsection
